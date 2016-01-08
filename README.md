@@ -57,13 +57,16 @@ var report = (function(){
 })();
 ```
 
-start the reporting
+###start the reporting
 
 ```
 report.start()
 ```
+***you'll see this***
 
-stop the reporting
+![example](report.png)
+
+###stop the reporting
 
 ```
 report.stop()
