@@ -1,18 +1,3 @@
-##Geth
-
-console report tool
-
----
-
-Start your **geth** console
-
-```
-geth -rpc console 2> geth.log
-```
-
-once the console is up an running, copy past the below code
-
-```
 var report = (function(){
 	var graph = {
 		rows:15,
@@ -152,29 +137,3 @@ var report = (function(){
 	};
 
 })();
-
-```
-
-###start the reporting
-
-```
-report.start()
-```
-***you'll see this***
-
-![example](report.png)
-
-###stop the reporting
-
-```
-report.stop()
-```
-
----
-
-###donations appreciated
-
-* **eth**: 0x30bb4357cd6910c86d2238bf727cbe8156680e62
-* **btc**: 1NaVpK1qjx2ZT2e4xLDiiDjHiguR7DM8j2
-
- 
