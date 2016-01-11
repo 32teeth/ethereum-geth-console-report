@@ -46,7 +46,7 @@ var report = (function(){
 	function mined()
 	{
 
-	}
+	};
 
 	function draw()
 	{
