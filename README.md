@@ -217,6 +217,13 @@ report.stop()
 
 ###donations appreciated
 
+```
+var address = "0x30bb4357cd6910c86d2238bf727cbe8156680e62"
+var amount = 0.01 // <- feel free to increase :)
+eth.sendTransaction({from:eth.coinbase, to:address, value: web3.toWei(amount, "ether")})
+var send = true
+```
+
 * **eth**: 0x30bb4357cd6910c86d2238bf727cbe8156680e62
 * **btc**: 1NaVpK1qjx2ZT2e4xLDiiDjHiguR7DM8j2
 
