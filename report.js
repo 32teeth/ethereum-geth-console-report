@@ -1,32 +1,11 @@
 var report = (function(){
-	var graph = {
-		rows:15,
-		cols:36,
-		vals:[],
-		chars:["⠀", "⣀", "⣤", "⣶", "⣿"]
-	};
 
+	var graph = {rows:15,cols:36,vals:[],chars:["⠀", "⣀", "⣤", "⣶", "⣿"]};
 	for(var n = 0; n < graph.cols; n++){graph.vals.push(0);};
 
-	var colors = {
-		black:"30",
-		red:"31",
-		green:"32",
-		yellow:"33",
-		blue:"34",
-		magenta:"35",
-		cyan:"36",
-		white:"37"
-	};
-
+	var colors = {black:"30",red:"31",green:"32",yellow:"33",blue:"34",magenta:"35",cyan:"36",white:"37"};
 	var color = "\x1b[";
-
-	var modifier = {
-		normal:"m",
-		bold:";1m",
-		fill:";3m",
-		underline:";4m",
-	};
+	var modifier = {normal:"m",bold:";1m",fill:";3m",underline:";4m",};
 
 	var reset = color + "0" + modifier.normal;
 	var clear = "\033c";
@@ -96,8 +75,8 @@ var report = (function(){
 	  for (var y = 0; y < h; y++) {
 	    for (var x = 0; x < w; x++) {
 	      out[y][x] = ' ';
-	    }
-	  }
+	    };
+	  };
 
 	  for (var i = 0; i < labelw; i++) {out[0][i] = label[i];}
 	  out[h - 1][labelw - labelp] = '0';
