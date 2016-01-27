@@ -10,6 +10,22 @@ Start your **geth** console
 geth -rpc console 2> geth.log
 ```
 
+## Installation
+###Option 1
+
+* download and save the [report.js](https://raw.githubusercontent.com/32teeth/ethereum-geth-console-report/master/report.js) file to your local machine
+* in the geth console:
+
+```
+> loadScript("[path to folder]/report.js")
+```
+once the file has been loaded
+
+```
+> report.start()
+```
+
+###Option 2
 once the console is up an running, copy past the below code
 
 ```
