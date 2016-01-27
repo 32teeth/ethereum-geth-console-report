@@ -120,12 +120,13 @@ var report = (function(){
 		var w = "\twallet:\t\t" + eth.coinbase;
 		var h = "\thashrate:\t" + color + colors.green + modifier.bold + parseFloat((miner.hashrate/1000)/1000).toFixed(3) + " mhs";
 		var b = "\tether:\t\t" + color + colors.green + modifier.bold + web3.fromWei(eth.getBalance(eth.coinbase), "ether") + " Ξ";
+		var cb = "\tcurren block:\t" + eth.blockNumber;		
 		var di = "\tdifficulty:\t" + eth.getBlock("latest").difficulty;
 		var m = "\tmined:\t\t";
 		var s = false;
 		for(var n = eth.blockNumber; n >= (eth.blockNumber-10); n--){if(eth.getBlock(n).miner == eth.coinbase){m += " " + n;s = true;}};
 		if(!s){m += color + colors.red + modifier.bold + "no block mined"};
-		var message = reset + [d,w,h,b,di,m].join(" " + reset + "\n");
+		var message = reset + [d,w,h,b,cb,di,m].join(" " + reset + "\n");
 		return message;
 	}
 
